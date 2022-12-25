@@ -2,22 +2,20 @@ Feature: Test Book Store Application
 
 #Test case1 : Add new user registration
   Scenario: Create a new user
-    Given Initialize the browser
-    And Go to Book Store
+    Given  Go to Book Store
     And user clicks on Login Page
    When Open new user registration page
     When user enters the below data for new user
       |FirstName |LastName |UserName |Password |
-      |TestFirstName |TestLastName|TestendUser4|Testing@1234|
+      |TestFirstName |TestLastName|TestendUser8|Testing@1234|
    And User solves the reCaptcha box
     Then user clicks on Register button
 
 
 #Test case2 : Login with newly register user
   Scenario: Login with newly registered user
-    Given Initialize the browser
-    And Go to Book Store
-    Given user clicks on Login Page
+    Given Go to Book Store
+    And user clicks on Login Page
     When user enters the below data to login
       |UserName |Password|
       |TestendUser1|Testing@1234|
@@ -29,8 +27,7 @@ Feature: Test Book Store Application
 
 #Test case3
   Scenario: User performs search book and added to collection
-    Given Initialize the browser
-    And Go to Book Store
+    Given Go to Book Store
     And user clicks on Login Page
     When user enters the below data to login
       |UserName |Password|
@@ -43,8 +40,7 @@ Feature: Test Book Store Application
 
     #Test case4 -Viewing Profile and verifying collections
   Scenario: User validates books is added to profile
-    Given Initialize the browser
-    And Go to Book Store
+    Given Go to Book Store
     And user clicks on Login Page
     When user enters the below data to login
       |UserName |Password|
@@ -54,8 +50,7 @@ Feature: Test Book Store Application
 
     #Test case5 -Delete Book from Collection and Verify
 Scenario: User validates Book is deleted from Collection
-  Given Initialize the browser
-  And Go to Book Store
+  Given Go to Book Store
   And user clicks on Login Page
   When user enters the below data to login
     |UserName |Password|
@@ -65,8 +60,7 @@ Scenario: User validates Book is deleted from Collection
 
    #Test case6 -Navigation
   Scenario: User validates all navigation points
-    Given Initialize the browser
-    And Go to Book Store
+    Given Go to Book Store
     And user clicks on Login Page
     When user enters the below data to login
       |UserName |Password|
@@ -77,8 +71,7 @@ Scenario: User validates Book is deleted from Collection
 
   #Test case7 -Logout from Book store
   Scenario: Logout from application
-    Given Initialize the browser
-    And Go to Book Store
+    Given Go to Book Store
     And user clicks on Login Page
     When user enters the below data to login
       |UserName |Password|
